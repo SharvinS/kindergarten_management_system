@@ -1,0 +1,171 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #252525;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.main-app-container {
+  
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px; /* height of your footer */
+  background-image: url(https://wallpaperaccess.com/download/office-desk-1856311);
+  background-attachment: fixed;
+}
+
+.footer {
+  background-color: #252525;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+}
+
+.navbar {
+  width: 100%;
+  position: relative;
+  height: 80px;
+  background-color: #252525;
+}
+
+.navbar li {
+  float: right;
+}
+
+.navbar a {
+  float: right;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  text-emphasis-color: white;
+}
+.navbar .navbar-brand {
+  height: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+.container-fluid {
+  padding: 10px;
+}
+
+.card-container.card {
+  max-width: 350px !important;
+  padding: 40px 40px;
+}
+
+.card {
+  background-color: #f7f7f7;
+  padding: 20px 20px 30px;
+  margin: 0 auto 25px;
+  margin-top: 15px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+  height: 10px;
+}
+
+.profile-img-card {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  border-radius: 50%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th {
+  background: rgb(133, 133, 133);
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  text-align: left;
+}
+
+.text-muted {
+  font-size: small;
+}
+
+hr {
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+homeH1 {
+  color: rgb(119, 114, 114);
+  font-family: 'Righteous', cursive;
+  font-size: 35px;
+  font-weight: normal;
+  line-height: 35px;
+  margin: 10px 0 20px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #000;
+  margin: 10px 0 24px;
+  text-align: center;
+}
