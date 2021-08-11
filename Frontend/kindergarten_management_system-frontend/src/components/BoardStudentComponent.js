@@ -358,14 +358,16 @@ class BoardStudentComponent extends Component {
                               </div>
                             </div>
 
-                            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"
+                              style={{ marginTop: "15px" }}>
                               <label>State: </label>
                               <div className="form-control" id="disabledInput" rows="3">
                                 <label>{this.state.user.addressState}</label>
                               </div>
                             </div>
 
-                            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"
+                              style={{ marginTop: "15px" }}>
                               <label>Country: </label>
                               <div className="form-control" id="disabledInput" rows="3">
                                 <label>{this.state.user.addressCountry}</label>
@@ -374,7 +376,7 @@ class BoardStudentComponent extends Component {
 
 
                           </div>
-                          
+
                         </Tab>
 
                         <Tab eventKey="fatherDetails" title="Father Details">
@@ -448,7 +450,7 @@ class BoardStudentComponent extends Component {
                             </div>
                           </div>
 
-                          
+
 
                         </Tab>
 

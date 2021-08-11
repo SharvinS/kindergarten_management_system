@@ -7,6 +7,7 @@ import documents from "../assets/documents.png";
 import ReactHover from "react-hover";
 import { Trigger, Hover } from "react-hover/dist/ReactHover";
 import { Tabs, Tab, Row, Col, Container } from "react-bootstrap";
+import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
 
 class UpdateStudentComponent extends Component {
   constructor(props) {
@@ -218,12 +219,12 @@ class UpdateStudentComponent extends Component {
     this.setState({ addressCity: event.target.value });
   };
 
-  changeAddressStateHandler = (event) => {
-    this.setState({ addressState: event.target.value });
+  changeAddressStateHandler = (value) => {
+    this.setState({ addressState: value });
   };
 
-  changeAddressCountryHandler = (event) => {
-    this.setState({ addressCountry: event.target.value });
+  changeAddressCountryHandler = (value) => {
+    this.setState({ addressCountry: value });
   };
 
   changeClassroomHandler = (event) => {
@@ -395,6 +396,8 @@ class UpdateStudentComponent extends Component {
   }
 
   render() {
+
+    const { addressCountry, addressState } = this.state;
 
     const uploadImage = (e) => {
       const image = e.target.files[0];
@@ -856,26 +859,27 @@ class UpdateStudentComponent extends Component {
 
                                   <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"
                                     style={{ marginTop: "15px" }}>
-                                    <label>State:</label>
-                                    <input
-                                      placeholder="State"
-                                      name="addressState"
+                                    <label>Country:</label>
+                                    <CountryDropdown
+                                      placeholder="Country"
+                                      name="addressCountry"
                                       className="form-control"
-                                      value={this.state.addressState}
-                                      onChange={this.changeAddressStateHandler}
+                                      value={addressCountry}
+                                      onChange={(value) => this.changeAddressCountryHandler(value)}
                                       maxLength="50"
                                     />
                                   </div>
 
                                   <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"
                                     style={{ marginTop: "15px" }}>
-                                    <label>Country:</label>
-                                    <input
-                                      placeholder="Country"
-                                      name="addressCountry"
+                                    <label>State:</label>
+                                    <RegionDropdown
+                                      placeholder="State"
+                                      name="addressState"
                                       className="form-control"
-                                      value={this.state.addressCountry}
-                                      onChange={this.changeAddressCountryHandler}
+                                      country={addressCountry}
+                                      value={addressState}
+                                      onChange={(value) => this.changeAddressStateHandler(value)}
                                       maxLength="50"
                                     />
                                   </div>
